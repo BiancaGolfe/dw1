@@ -1,0 +1,308 @@
+html {
+    scroll-behavior: smooth;
+}
+section:target {
+    outline: 5px solid rgb(255, 0, 191);
+    background-color: rgba(255, 152, 0, 0.1); 
+}
+nav  {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;    
+}
+
+nav   {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+/*Carossel*/
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: 850px;
+    }
+
+    .carousel-slide {
+        min-width: 100%;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+ 
+ /*Roda pé*/
+    .flex-container {
+        display: flex;                           
+        align-items: center;                     
+        justify-content: center;                 
+        background-color: rgb(88, 16, 17);;      
+        padding: 20px;                           
+    }
+    
+    .image {
+        width: 200px;                            
+        margin: 0 10px;                         
+    }
+    
+    .text {
+        margin: 0 20px;                         
+        font-size: 1.0rem;                     
+        text-align: right;                     
+        color: #ffffff;                         
+    }
+    h5{
+        text-align: center;
+        background-color: rgb(88, 16, 17);
+    }
+/*cabeçalho*/
+.textt:hover {
+    color: rgb(53, 1, 1);
+}
+    .flex-containerr {
+        display: flex;                          
+        align-items: center;                     
+        background-color: rgb(251,229,216);;      
+        padding: 0px;                           
+    }
+    
+    .imagee {
+        width: 120px;                           
+        margin-left: 80px;                  
+    }
+    
+    .text-container {
+        flex: 0.82;                              
+        display: flex;                         
+        justify-content: center;  
+        text-align: center;
+    }
+    
+    .textt {
+        text-align: center;                     
+        font-size: 2.0rem;  
+        color: #ffffff;    
+    }
+
+    /* Partículas */
+    .particle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: rgb(255, 113, 137);
+        border-radius: 50%;
+        pointer-events: none; 
+        animation: explode 0.8s forwards;
+    }
+
+    @keyframes explode {
+        from {
+            opacity: 1;
+            transform: translate(0, 0) scale(1);
+        }
+        to {
+            opacity: 0;
+            transform: translate(var(--x), var(--y)) scale(0.5);
+        }
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(255, 113, 137);
+        color: #ffffff;
+    }
+
+/*menu*/
+.fixed-menu {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 113, 137);
+    padding: 10px 0;
+    z-index: 1;
+}
+
+.fixed-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.fixed-menu ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.fixed-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+/*Título*/
+.custom-title {
+    font-size: 45px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:  rgb(255, 113, 137);
+
+    text-transform: uppercase; /* Transformar texto em maiúsculas */
+    text-align: center;
+    margin-top: 8px; 
+}
+/**Body*/
+
+.div1 {
+    background-color: rgb(88, 16, 17);
+    color: rgb(255, 113, 137);
+    padding: 0px ;
+    text-align: center;
+}   
+.texto {
+    flex: 0.82;                           
+    display: flex;                          
+    justify-content: center;                
+}
+.titlefoods {
+    font-size: 25px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    color:  rgb(255, 113, 137);
+    text-transform: uppercase; /* Transformar texto em maiúsculas */
+    text-align: center; 
+    margin-top: 8px; 
+    background-color: rgb(251,229,216);
+    width:100% ;
+
+}
+    
+.titlefoodsesquerda {
+    font-size: 25px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffffff; 
+    text-transform: uppercase; /* Transformar texto em maiúsculas */
+    text-align:left;
+    margin-top: 8px; 
+}
+
+.flex-containerr1 {
+    display: flex;                          
+    align-items: center;                     
+    background-color: rgb(88, 16, 17); 
+    padding: 0px;     
+}
+
+.imagee1 {
+    width: 400px;                           
+    margin-left: 10px;
+    border: solid rgb(88, 16, 17) 1px;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+    margin-top: 10px;  
+  }
+
+  .imagem {
+    margin-right: 20px; /* Espaço entre a imagem e o texto */
+    margin-left: 10px;
+    border: solid rgb(88, 16, 17) 2px;
+    height: 250px;
+    width: 300px;
+  }
+  ul, li {
+    text-align: left;
+  }
+/*linha*/
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line {
+    flex: 1;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+.title {
+    margin: 0 10px;
+    white-space: nowrap;
+}
+/*setinha*/
+.arrow-container {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.arrow {
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid rgb(88, 16, 17); /* Forma de seta */
+    transition: transform 0.3s ease;
+}
+
+/* Quando o checkbox estiver checado (conteúdo expandido) */
+input[type="checkbox"]:checked + .arrow-container .arrow {
+    transform: rotate(180deg); /* Gira a seta para baixo */
+}
+
+/* O conteúdo oculto */
+.more-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+/* Exibe o conteúdo quando o checkbox estiver checado */
+input[type="checkbox"]:checked + .arrow-container + .more-content {
+    max-height: none; /* Expande o conteúdo */
+}
+
+/*Ver Mais */
+input[type="checkbox"] {
+    display: none;
+}
+
+

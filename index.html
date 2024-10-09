@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site para receitas de culunária.">
+    <meta name="author" content="Bianca Gabriela Golfe">
+    <meta name="keywords" content="sabor,receita,modo de preparo">
+    <title>Receitas Culinárias</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="imagens/logosite.png" type="image/x-icon">
+</head>
+<body>
+<section id="inicio"></section>
+    <div class="flex-containerr">
+        <img src="imagens/c7d2b3ad2c2442b3be6db106039bcf74-free.png" alt="Imagem" class="imagee">
+    <div class="text-container">
+        <p class="textt custom-title" id="hover-title"><strong>RECEITAS CULINÁRIAS</strong></p>
+    </div>
+
+    <script>
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            document.body.appendChild(particle);
+
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+
+           
+            const angle = Math.random() * 360;
+            const radius = Math.random() * 80;
+            const offsetX = Math.cos(angle) * radius;
+            const offsetY = Math.sin(angle) * radius;
+
+           
+            particle.style.setProperty('--x', `${offsetX}px`);
+            particle.style.setProperty('--y', `${offsetY}px`);
+
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 800); 
+        }
+
+        const title = document.getElementById('hover-title');
+
+        
+        title.addEventListener('mouseenter', (e) => {
+            
+            const particleCount = 50; 
+            const { left, top, width, height } = title.getBoundingClientRect();
+
+          
+            for (let i = 0; i < particleCount; i++) {
+                const x = left + Math.random() * width;
+                const y = top + Math.random() * height;
+
+              
+                createParticle(x, y);
+            }
+        });
+    </script>
+    </div>
+    <nav class="fixed-menu">
+        <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#salgados">Salgados</a></li>
+            <li><a href="#doces">Doces</a></li>
+            <li><a href="#especiais">Especiais</a></li>
+            <li><a href="#festa">Festa</a></li>
+            <li><a href="#dicas">Dicas</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="imagens/imagem1.jpg" alt="Imagem 1">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/maça.webp" alt="Imagem 2">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/img2.jpg" alt="Imagem 3">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/imagem3.jpg" alt="Imagem 4">
+            </div>
+            <div class="carousel-slide">
+                <img src="imagens/panquecafit.webp" alt="Imagem 4">
+            </div>
+        </div>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const totalSlides = slides.length;
+        const indicators = document.querySelectorAll('.carousel-indicators div');
+
+        function updateCarousel() {
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel').style.transform = `translateX(${offset}%)`; }
+            
+        function moveSlide(direction) {
+            currentIndex += direction;
+
+            if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            } else if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            }
+
+            updateCarousel();
+        }
+
+        function moveToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+        }
+
+       
+        setInterval(() => {
+            moveSlide(1);
+        }, 4000); 
+    </script>
+<section id="salgados"></section>
+<br>
+<div class="div1">
+<div class="texto">
+    <p class="custom-title">Salgados</p></div>
+</div>
+    
+    </div>
+
+<div class="title-container">
+    <div class="line"></div>
+    <p class="titlefoods">Enroladinho</p>
+    <div class="line"></div>
+</div>
+
+<div class="container">
+    <img src="imagens/enroladinho.png" alt="Imagem" class="imagem">
+    <div class="text">
+        <p class="titlefoodsesquerda">Ingredientes</p> 
+            <ul>
+                <li>1 envelope de fermento biológico seco (10 gramas)</li>
+                <li>1 xícara de chá de leite morno</li>
+                <li>2 ovos</li>
+                <li>1/4 xícara de chá de açúcar</li>
+                <li>1/4 xícara de chá de óleo</li>
+                <li>1 colher de sopa de sal</li>
+                <li>4 xícaras de chá de farinha de trigo</li>
+                <li>300 gramas de mussarela fatiada</li>
+                <li>300 gramas de presunto ralado</li>
+                <li>200 gramas de requeijão cremoso</li>
+                <li>1 ovo</li>
+                <li>Orégano a gosto</li>
+            </ul>
+        </div>
+</div>
+<br>
+<p class="titlefoodsesquerda">Modo de preparo:</p>
+    <ul>
+        <li>Em um recipiente, misture o fermento com o leite morno, tampe com uma toalha e reserve por 5 minutos;</li>
+        <li>Passado o tempo, adicione o açúcar, os ovos e o óleo ao fermento. Mexa bem para homogeneizar;</li>
+        <li>Depois, aos poucos, acrescente metade da farinha de trigo com o sal, mexendo sempre;</li>
+        <li>Quando a massa estiver mais pesada, transfira para uma bancada enfarinhada e vá adicionando o restante da farinha, desta vez, usando as mãos para misturar;</li>
+        <li>Assim que a massa não grudar mais nas mãos e estiver bem lisinha, transfira para um recipiente enfarinhado e tampe com um pano. Deixe a massa descansar em um local bem quente e abafado por 1 hora;</li>
+        <li>Depois que a massa dobrar de volume, retire-a do recipiente e corte-a ao meio;</li>
+        <li>Usando um rolo, abra a metade de massa em formato de retângulo;</li>
+        <li>Em seguida, pincele metade do requeijão por cima, formando uma camada;</li>
+        <li>No centro do retângulo, acomode metade do queijo, metade do presunto e um pouco de orégano;</li>
+        <li>Depois, pincele um pouquinho de água nas laterais da massa e feche, formando um envelope capaz de envolver todo o recheio. Repita o processo de rechear com o restante da massa;</li>
+        <li>Corte os envelopes no tamanho que desejar e acomode-os em uma forma untada com farinha;</li>
+        <li>Pincele o ovo batido sobre os salgados e salpique orégano. Leve ao forno preaquecido a 180ºC por cerca de 30 minutos, ou até ficarem bem douradinhos;</li>
+    </ul>
+    <div class="title-container">
+        <div class="line"></div>
+        <p class="titlefoods">Pão de queijo</p>
+        <div class="line"></div>
+    </div>
+    
+    <div class="container">
+        <img src="imagens/paodequeijo.png" alt="Imagem" class="imagem">
+        <div class="text">
+            <p class="titlefoodsesquerda">Ingredientes</p> 
+                <ul>
+                    <li>2 xícaras (chá) de polvilho azedo</li>
+                    <li>1 xícara (chá) de polvilho doce</li>
+                    <li>1½ xícara (chá) de queijo meia-cura ralado grosso</li>
+                    <li>3 ovos</li>
+                    <li>1½ xícara (chá) de água</li>
+                    <li>¼ de xícara (chá) de óleo</li>
+                    <li>1 colher (chá) de sal</li>
+                </ul>
+            </div>
+    </div>
+    <br>
+    <p class="titlefoodsesquerda">Modo de preparo:</p>
+        <ul>
+            <li>Preaqueça o forno a 200 ºC.</li>
+            <li>Coloque a água e o óleo numa panela pequena (ou fervedor) e leve ao fogo médio para ferver. Enquanto isso, numa tigela grande, misture os polvilhos com o sal. </li>
+            <li>Assim que a mistura de água e óleo ferver, despeje aos poucos sobre o polvilho para escaldar.</li>
+            <li>Assim que o polvilho escaldado amornar, adicione o queijo ralado e misture bem com as mãos.</li>
+            <li>Numa tigela pequena, quebre um ovo de cada vez e junte à massa.</li>
+            <li>Para modelar os pães: coloque um pouco de óleo num pires para untar as mãos.</li>
+            <li>Leve ao forno para assar por cerca de 40 minutos, até crescer e dourar. Retire do forno e sirva a seguir.</li>
+        </ul>
+
+
+        <div class="title-container">
+            <div class="line"></div>
+            <p class="titlefoods">Crepe de sanduicheira</p>
+            <div class="line"></div>
+        </div>
+        
+        <div class="container">
+            <img src="imagens/panquecafit.webp" alt="Imagem" class="imagem">
+            <div class="text">
+                <p class="titlefoodsesquerda">Ingredientes</p> 
+                    <ul>
+                        <li>1 ovo</li>
+                        <li>1 colher de chá de açúcar</li>
+                        <li>1/2 xícara de chá de trigo</li>
+                        <li>1/2 xícara de chá de leite</li>
+                        <li>Uma pitada de sal</li>
+                        <li>1 colher de chá de manteiga</li>
+                        <li>Recheio de sua preferência (pode ser queijo, presunto, frango, atum, creme de avelã, doce de leite ou pedaços de chocolate)</li>
+                    </ul>
+                </div>
+        </div>
+        <br>
+        <p class="titlefoodsesquerda">Modo de preparo:</p>
+            <ul>
+                <li>Em um liquidificador, adicione o ovo, o trigo, o leite, o sal, a manteiga e bata tudo até a massa ficar homogênea;</li>
+                <li>Aqueça a sua sanduicheira conforme o manual e espalhe a massa por toda a extensão;</li>
+                <li>Feche a sanduicheira e aguarde 5 minutos até que a massa esteja assada;</li>
+                <li>Depois disso, acrescente o recheio de sua preferência, dobre a massa de crepe e feche a sanduicheira novamente;</li>
+                <li>Aguarde o crepe tostar e já pode se deliciar com um lanche da tarde preparado em menos de 5 minutos!</li>
+            </ul>
+
+            <div class="title-container">
+                <div class="line"></div>
+                <p class="titlefoods">Batata gratinada</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="container">
+                <img src="imagens/imagem3.jpg" alt="Imagem" class="imagem">
+                <div class="text">
+                    <p class="titlefoodsesquerda">Ingredientes</p> 
+                        <ul>
+                           <li>1kg de batata</li>
+                           <li>1/2 xícara de queijo ralado</li>
+                           <li>1/4 xícara de leite</li>
+                           <li>Sal e pimenta a gosto</li>
+                           <li>Ervas frescas picadas(opcional)</li>
+                        </ul>
+                    </div>
+            </div>
+            <br>
+            <p class="titlefoodsesquerda">Modo de preparo:</p>
+                <ul>
+                    <li>Lave e descasque as batatas e corte em fatias finas, em seguida, coloque em uma panela com água fervente e cozinhe até ficarem macias. </li>
+                    <li>Pré-aqueça o forno a 180 graus Celsius, em seguida, coloque as fatias de batata em uma assadeira e tempere com sal e pimenta a gosto. </li>
+                    <li>Em uma tigela, misture o queijo ralado com o leite e as ervas picadas (se desejar), despeje a mistura sobre as fatias de batata e misture bem para que a batata gratinada esteja dourada e crocante.</li>
+                    <li>Leve a assadeira ao forno e asse por cerca de 20-30 minutos, ou até que esteja dourado.</li>
+                </ul>
+<section id="doces"></section>
+<br>
+<div class="div1">
+    <div class="texto">
+        <p class="custom-title">Doces</p></div>
+    </div>
+    
+    <div class="title-container">
+        <div class="line"></div>
+        <p class="titlefoods">Bolinho de chuva</p>
+        <div class="line"></div>
+    </div>
+    
+    <div class="container">
+        <img src="imagens/bolinhodechuva.png" alt="Imagem" class="imagem">
+        <div class="text">
+            <p class="titlefoodsesquerda">Ingredientes</p> 
+                <ul>
+                    <li>2 ovos</li>
+                    <li> 1 xícara de açúcar</li>
+                    <li>1 xícara (chá) de leite</li>
+                    <li>2 e 1/2 xícaras de farinha de trigo</li>
+                    <li>1 colher (sopa) de fermento em pó</li>
+                    <li> 3 colheres (sopa) de açúcar para polvilhar</li>
+                    <li>1 colher (sopa) de canela para polvilhar</li>
+                    <li>1 litro de óleo para fritar</li> 
+                </ul>
+            </div>
+    </div>
+    <br>
+    <p class="titlefoodsesquerda">Modo de preparo:</p>
+        <ul>
+            <li>Misture todos os ingredientes até obter uma massa cremosa e homogênea.</li>
+            <li>Deixe aquecer uma panela com bastante óleo para que os bolinhos possam boiar.</li>
+            <li>Quando o óleo estiver bem quente (180º C), com uma colher, comece a colocar pequenas quantidades de massa, e frite até que dourem por inteiro.</li>
+            <li>Coloque os bolinhos sobre papel absorvente e depois passe-os no açúcar com canela.</li>
+        </ul>
+    <div class="title-container">
+        <div class="line"></div>
+        <p class="titlefoods">Bolo de banana</p>
+        <div class="line"></div>
+    </div>
+    
+    <div class="container">
+        <img src="imagens/bolodebanana.png" alt="Imagem" class="imagem">
+        <div class="text">
+            <p class="titlefoodsesquerda">Ingredientes</p> 
+                <ul>
+                    <li>1 xícara de chá de açúcar (para a calda)</li>
+                    <li>1 xícara de chá de água (para a calda)</li>
+                    <li>4 a 5 bananas cortada em rodelas</li>
+                    <li>3 ovos (gemas e claras separados)</li>
+                    <li>3 colheres de sopa de manteiga</li>
+                    <li>1 e 1/2 xícara de chá de açúcar</li>
+                    <li>1 xícara de chá de leite</li>
+                    <li>2 xícaras de chá de farinha de trigo</li>
+                    <li>Uma pitada de sal</li>
+                    <li>1 colher de sopa de fermento químico em pó (fermento para bolo)</li>
+                </ul>
+            </div>
+    </div>
+    <br>
+    <p class="titlefoodsesquerda">Modo de preparo:</p>
+        <ul>
+            <li>Reúna todos os ingredientes;</li>
+            <li>Em uma panela, derreta o açúcar em fogo médio;</li>
+            <li>Adicione a água com cuidado e mexa bem até o açúcar dissolver e formar uma calda;</li>
+            <li>Despeje a calda em uma forma, espalhe bem por todo o fundo e finalize preenchendo com as rodelas de banana. Reserve;</li>
+            <li>Em uma vasilha, coloque as gemas, a manteiga, o açúcar e bata na batedeira até formar um creme clarinho;</li>
+            <li>Ainda batendo, adicione o leite gradualmente;</li>
+            <li>Acrescente a farinha, o sal e bata até misturar bem. Reserve;</li>
+            <li>Bata as claras em neve, junte com a massa e misture delicadamente até incorporar;</li>
+            <li>Junte o fermento e misture;</li>
+            <li>Despeje a massa por cima da calda com as rodelas de bananas, ajeite bem e leve ao forno preaquecido a 180 ºC por cerca de 30 minutos;</li>
+            <li>Agora é só servir. Bom apetite!</li>
+        </ul>
+        <p class="titlefoodsesquerda">Dicas</p>
+
+    <ul>
+        <li>Adicione canela em pó na massa do seu bolo de banana caramelizado, para deixar o sabor dele ainda mais delicioso.</li>
+        <li>E se você não é muio fã de banana, pode fazer a mesma receita da massa usando outras frutas, como laranja ou abacaxi. Experimente!</li>
+        </ul>
+    
+        <div class="title-container">
+            <div class="line"></div>
+            <p class="titlefoods">Pudim</p>
+            <div class="line"></div>
+        </div>
+        
+        <div class="container">
+            <img src="imagens/pudim.png" alt="Imagem" class="imagem">
+            <div class="text">
+                <p class="titlefoodsesquerda">Ingredientes</p> 
+                    <ul>
+                        <li>1 lata de leite condensado</li>
+                        <li>3 ovos inteiros</li>
+                        <li>1 lata de leite (medida da lata de leite condensado)</li> 
+                        <li>1 xícara (chá) de açúcar(calda)</li>
+                        <li>1/2 xícara de água(calda)</li>
+                    </ul>
+                </div>
+        </div>
+        <br>
+        <p class="titlefoodsesquerda">Modo de preparo:</p>
+            <ul>
+                <li>Primeiro, bata bem os ovos no liquidificador.</li>
+                <li>Acrescente o leite condensado e o leite, e bata novamente.</li>
+                <li>Derreta o açúcar na panela até ficar moreno, acrescente a água e deixe engrossar.</li>
+                <li>Coloque em uma forma redonda e despeje a massa do pudim por cima.</li>
+                <li>Asse em forno médio por 45 minutos, com a assadeira redonda dentro de uma maior com água.</li>
+                <li>Espete um garfo para ver se está bem assado.</li>
+                <li>Deixe esfriar e desenforme.</li>
+            </ul>
+
+
+    
+            <div class="title-container">
+                <div class="line"></div>
+                <p class="titlefoods">Bolo de baunilha</p>
+                <div class="line"></div>
+            </div>
+            
+            <div class="container">
+                <img src="imagens/bolodebaunilia.png" alt="Imagem" class="imagem">
+                <div class="text">
+                    <p class="titlefoodsesquerda">Ingredientes</p> 
+                        <ul>
+                            <li>3 ovos grandes inteiros</li>
+                            <li>3 ovos grandes inteiros</li>
+                            <li>1/2 xícara de óleo</li>
+                            <li>1 colher de chá de essenência de baunilha</li>
+                            <li>2 xícaras e açucar</li>
+                            <li>250ml de leite</li>
+                            <li>3 xícaras de chá de farinha de trigo</li>
+                            <li>1 colher de sobremesa de fermento em pó</li>
+                        </ul>
+                    </div>
+            </div>
+            <br>
+            <p class="titlefoodsesquerda">Modo de preparo:</p>
+                <ul>
+                    <li>Bata os ovos na batedeira até que fiquem bem clarinhos.</li>
+                    <li>Coloque o óleo sem desligar a batedeira.</li>
+                    <li>Acrescente todo o açúcar e continue batendo</li>
+                    <li>Coloque a essência de baunilha.</li>
+                    <li>Aos poucos vá colocando a farinha de trigo e o leite.</li>
+                    <li>Depois de bater bem, coloque o fermento e misture só por alguns segundos (eu prefiro misturar com uma espátula), pois, se bater muito depois de colocar o fermento o bolo não crescerá.</li>
+                    <li>Despeje a mistura em uma forma média, untada com margarina e trigo.</li>
+                    <li>Asse em forno médio, por aproximadamente 40 minutos, ou até dourar.</li>
+                </ul>
+                <div class="title-container">
+                    <div class="line"></div>
+                    <p class="titlefoods">Mousse</p>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="container">
+                    <img src="imagens/img2.jpg" alt="Imagem" class="imagem">
+                    <div class="text">
+                        <p class="titlefoodsesquerda">Ingredientes</p> 
+                            <ul>
+                                <li>10 colheres de sopa de açucar</li>
+                                <li>200g de chocolate</li>
+                                <li>1 ou 2 colheres de manteiga</li>
+                                <li>6 ovos</li>
+                            </ul>
+                        </div>
+                </div>
+                <br>
+                <p class="titlefoodsesquerda">Modo de preparo:</p>
+                    <ul>
+                        <li>Colocar o chocolate e a manteiga em uma panela em banho maria até derreter.</li>
+                        <li>Separar as gemas e as claras. Bater as claras até ficarem em ponto de neve.</li>
+                        <li>Misturar na batedeira o chocolate derretido com as gemas uma por vez.</li>
+                        <li>Misturar o açucar.</li>
+                        <li>Misturar as claras e bater a mão.</li>
+                        <li>Colocar para gelar por 2-3 horas.</li>
+                    </ul>
+<br>
+<section id="especiais"></section>
+<br>
+                <div class="div1">
+                    <div class="texto">
+
+                        <p class="custom-title">Especiais</p></div>
+                    </div>
+                    <div class="title-container">
+                        <div class="line"></div>
+                        <p class="titlefoods">Maça do amor</p>
+                        <div class="line"></div>
+                    </div>
+                    
+                    <div class="container">
+                        <img src="imagens/maça.webp" alt="Imagem" class="imagem">
+                        <div class="text">
+                            <p class="titlefoodsesquerda">Ingredientes</p> 
+                                <ul>
+                                   <li>6 maças</li>
+                                   <li>6 palitos de sorvete</li>
+                                   <li>Meia xícara de chá de glucose de milho</li>
+                                   <li>2 xícaras de chá de açúcar</li>
+                                   <li>4 gotas de corante vermelho</li>
+                                   <li>Granulado colorido para enfeitar</li>
+                                </ul>
+                            </div>
+                    </div>
+                    <br>
+                    <p class="titlefoodsesquerda">Modo de preparo:</p>
+                        <ul>
+                            <li>Lave as maçãs e coloque os palitos de sorvete onde deverá ficar o cabo.</li>
+                            <li>Em uma panela, coloque o açúcar e a glucose de milho, espere formar uma calda grossa. Desligue, acrescente o corante e misture bem.</li>
+                            <li>
+                                Segure as maçãs pelo cabo do sorvete e passe-as pela calda, em seguida despeje o granulado colorido e coloque virada de cabeça para baixo em uma assadeira forrada com papel manteiga, deixe na geladeira até endurecer.</li>
+                        </ul>
+                    
+
+
+                        <div class="title-container">
+                            <div class="line"></div>
+                            <p class="titlefoods">Paçoca</p>
+                            <div class="line"></div>
+                        </div>
+                        
+                        <div class="container">
+                            <img src="imagens/paçoca.jpg" alt="Imagem" class="imagem">
+                            <div class="text">
+                                <p class="titlefoodsesquerda">Ingredientes</p> 
+                                    <ul>
+                                       <li>6 colheres de sopa de amendoim torrado sem casca e sem sal;</li>
+                                       <li>1 colher de sopa de óleo de coco liquido;</li>
+                                       <li>4 colheres de sopa de açúcar de coco, demerara ou mascavo;</li>
+                                       <li>1/3 Xícara de chá de farinha de aveia ou amêndoas</li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <br>
+                        <p class="titlefoodsesquerda">Modo de preparo:</p>
+                            <ul>
+                                <li>Num processador ou liquidificador, bata o amendoim até formar uma farinha bem fina. Transfira-o para uma tigela e adicione a farinha, o açúcar e o óleo.</li>
+                                <li>Misture tudo muito bem com auxílio de uma espátula, até formar uma mistura homogênea.</li>
+                                <li>Para moldar a paçoca, utilize um molde no formato que desejar.</li>
+                                <li>Leve as paçocas à geladeira por 20 minutos e pronto.</li>
+                            </ul>
+                            <div class="title-container">
+                                <div class="line"></div>
+                                <p class="titlefoods">Cocada</p>
+                                <div class="line"></div>
+                            </div>
+                            
+                            <div class="container">
+                                <img src="imagens/cocada.png" alt="Imagem" class="imagem">
+                                <div class="text">
+                                    <p class="titlefoodsesquerda">Ingredientes</p> 
+                                        <ul>
+                                           <li>2 latas de leite condensado</li>
+                                           <li>2 latas de açúcar (use a lata de leite condensado vazia para medir)</li>
+                                           <li>2 colheres (sopa) de margarina sem sal</li>
+                                           <li>200g de coco ralado</li>
+                                           <li>1 xícara (chá) de castanha de caju torrada e moída</li>
+                                           <li>Margarina para untar</li>
+                                        </ul>
+                                    </div>
+                            </div>
+                            
+                            <p class="titlefoodsesquerda">Modo de preparo:</p>
+                                <ul>
+                                    <li>Em uma panela, misture o leite condensado, o açúcar, a margarina, o coco e leve ao fogo médio, mexendo até desgrudar do fundo da panela. </li>
+                                    <li>Desligue, adicione a castanha e bata com uma colher por 10 minutos ou até engrossar. Espalhe em uma fôrma de 25cm x 30cm untada e deixe esfriar.</li>
+                                    <li>Corte em quadrados e sirva em seguida.</li>
+                                </ul>
+                                
+<br>
+
+                                <section id="festa"></section>
+                                <br>
+                                            <div class="div1">
+                                                <div class="texto">
+                                                    
+                                                    <p class="custom-title">Festa</p></div>
+                                                </div>
+                                                <div class="title-container">
+                                                    <div class="line"></div>
+                                                    <p class="titlefoods">Bolo de cenoura trufado</p>
+                                                    <div class="line"></div>
+                                                </div>
+                                                
+                                                <div class="container">
+                                                    <img src="imagens/bolodecenoratrufado.jpg" alt="Imagem" class="imagem">
+                                                    <div class="text">
+                                                        <p class="titlefoodsesquerda">Ingredientes da massa</p> 
+                                                            <ul>
+                                                                <li>240ml de óleo de girassol</li>
+                                                                <li>4 ovos</li>
+                                                                <li>300g de cenoura</li>
+                                                                <li>250g de açucar refinado</li>
+                                                                <li>240g de farinha de trigo </li>
+                                                                <li>2 colheres de sopa de fermento químico em pó</li>
+                                                            </ul>
+                                                        </div>
+                                                </div>
+                                                <p class="titlefoodsesquerda">Ingredientes da ganache</p>
+                                                <ul>
+                                                    <li>2 xícaras de chá de chocolate ao leite</li>
+                                                    <li>1 xícara de chá de creme de leite</li>
+                                                    <li>20g de glucose de milho</li>
+                                                    <li>1 colher de sopa de manteiga picada</li>
+                                                </ul>
+                                                <p class="titlefoodsesquerda">Ingredientes da cobertura</p>
+                                                    <ul>
+                                                        <li>1 e 1/2 xícaras de chá de chocolate ao leite</li>
+                                                        <li>2 colheres de sopa de manteiga</li>
+                                                        <li>3 colheres de sopa de óleo degirassol</li>
+                                                        <li>100g de creme de leite</li>
+                                                    </ul>
+                                                <br>
+                                                <p class="titlefoodsesquerda">Modo de preparo:</p>
+                                                    <ul>
+                                                        <li>No liquidificador, bata o óleo, os ovos, a cenoura picada e o açucar</li>
+                                                        <li>Em uma tigela, peneire a farinha de trigo e o fermento </li>
+                                                        <li>Acrescente a cenoura batida e misture bem</li>
+                                                        <li>Despeje a massa em uma assadeira redonda de 24cm, de fundo removível e forrada com papel-manteiga</li>
+                                                        <li>Leve para assar em forno (preaquecido) a 160°C por cerca de 40 minutos.</li>
+                                                    </ul>
+                                                <p class="titlefoodsesquerda">Ganache</p>
+                                                    <ul>
+                                                        <li>Aqueça o creme de leite e a glucose juntos</li>
+                                                        <li>Despeje sobre o chocolate ao leite, previamente derretido, e misture bem</li>
+                                                        <li>Por último, adicione a manteiga picada e misture novamente</li>
+                                                        <li>Reserve até esfriar</li>
+                                                    </ul>
+                                                    <p class="titlefoodsesquerda">Cobertura</p>
+                                                    <ul>
+                                                        <li>Derreta o chocolate seguindo as instruções da embalagem e acrescente a manteiga, o óleo de girrasol e o creme de leite</li>
+                                                        <li>Misture bem e reserve</li>
+                                                    </ul>
+                                                
+                                                    <p class="titlefoodsesquerda">Montagem</p>
+                                                    <ul>
+                                                        <li>Retire o funfo removível e monte o bolo dentro da forma utilizada para assar. Comece cortando a massa em três discos</li>
+                                                        <li>Coloque um disco da massa de cenoura e espalhe 1/3 da ganache ao leite</li>
+                                                        <li>Acrescente mais um disco da massa e distribua mais 1/3 da ganache de chocolate ao leite</li>
+                                                        <li>Cubra com o último disco da massa de cenoura e leve para gelar</li>
+                                                        <li>Finalize cobrindo o bolo com a cobertura restante</li>
+                                                    </ul>
+                            
+                                                    <div class="title-container">
+                                                        <div class="line"></div>
+                                                        <p class="titlefoods">Bolo de kitkat</p>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                    
+                                                    <div class="container">
+                                                        <img src="imagens/bolodekitkat.png" alt="Imagem" class="imagem">
+                                                        <div class="text">
+                                                            <p class="titlefoodsesquerda">Ingredientes</p> 
+                                                                <ul>
+                                                                    <li>3 xícaras de farinha de trigo; </li>
+                                                                    <li>1 e 1/2 xícara de  chocolate em pó;</li>
+                                                                    <li>1 e 1/2 colher de sopa de fermento em pó;</li>
+                                                                    <li>6 ovos;</li>
+                                                                    <li>1 e 1/4 xíc de óleo de canola, milho ou girassol;</li>
+                                                                    <li>1 e 1/4 xícara de  leite;</li>
+                                                                    <li>285g de chocolate meio amargo picado;</li>
+                                                                    <li>1/2 xícara de água;</li>
+                                                                    <li>150g de manteiga sem sal, cortada em pedacinhos, temperatura ambiente;</li>
+                                                                    <li>16 pacotinhos de  kitkat (dá para usar dedinhos de chocolate, tubinhos de wafer, ou qualquer chocolate em palitos);</li>
+                                                                    <li> Confetti, M&Ms, balinhas de chocolate ou chocoballs, ou o que quiser do gênero, para cobrir;</li>
+                                                                    <li>285g de  chocolate meio amargo picado;</li>
+                                                                    <li>1/2 xícara de água;</li>
+                                                                    <li>150g de manteiga sem sal, cortada em pedacinhos, temperatura ambiente</li>
+                                                                </ul>
+                                                            </div>
+                                                    </div>
+                                                    <br>
+                                                    <p class="titlefoodsesquerda">Modo de preparo:</p>
+                                                        <ul>
+                                                            <li>Primeiro faça a massa, depois:</li>
+                                                            <li> Unte e polvilhe com farinha de trigo duas assadeiras redondas de 20cm de diâmetro. Preaqueça o forno a 180 graus.</li>
+                                                            <li>Numa tigela grande, peneire juntos a farinha, o  chocolate em pó e o fermento. Reserve.</li>
+                                                            <li>Misture o  leite e o óleo. Reserve.</li>
+                                                            <li>Na batedeira, bata os ovos com o açúcar até ficar clarinho e dobrar de volume.  Junte a mistura de leite/óleo e os ingredientes secos peneirados aos poucos, sem parar de bater, até ficar homogêneo. Divida a massa entre as assadeiras preparadas (cuidado para não encher muito se suas formas forem baixinhas).</li>
+                                                            <li> Asse por mais ou menos 30 minutos, até passar no teste do palito. Deixe amornar e desenforme sobre duas folhas de papel alumínio ou papel manteiga.</li>
+                                                            <li> Deixe esfriar completamente e nivele, cortando o topo do  bolo que ficou arredondado, se precisar. Tente deixar reto, mas não se preocupe muito em ficar perfeito.</li>
+                                                        </ul>
+                                                        <p class="titlefoodsesquerda">Cobertura e recheio</p>
+                                                            <ul>
+                                                                <li>Derreta em banho maria (ou no microondas, em intervalos de 30 segundos) o  chocolate e a água.
+                                                                <li>Quanto estiver bem homogêneo, junte a manteiga em pedacinhos, misturando bem. </li>
+                                                                <li> esfriar em temperatura ambiente até chegar a uma consistência “espalhável” com espátula.</li>
+                                                            </ul>
+                                                        <p class="titlefoodsesquerda">Montagem</p>
+                                                        <ul>
+                                                            <li>Coloque uma das massas já frias e niveladas sobre o prato de servir. Espalhe um terço da cobertura com uma espátula.</li>
+                                                            <li>Cubra com a outra massa e meça a altura com uma régua – se o  bolo ficou mais alto que a altura dos palitinhos de  chocolate, acerte com uma faca de serra, tentando deixar retinho.</li>
+                                                            <li>Espalhe o restante do creme de chocolate sobre o  bolo e nas laterais, cuidando para não sujar o prato. Não precisa fazer uma camada muito grossa de creme.</li>
+                                                            <li>Quebre os  chocolates, separando os palitinhos, e cole-os por toda a lateral do bolo, bem próximos. Cubra o topo com as balinhas de  chocolate, para formar a “piscina” de balinhas.</li>
+                                                            <li>Com a fita, amarre toda a volta do bolo e arremate com um laço.</li>
+                                                        </ul>
+                                                        <br>
+                                                        
+                                                        <div class="title-container">
+                                                            <div class="line"></div>
+                                                            <p class="titlefoods">Cupcake</p>
+                                                            <div class="line"></div>
+                                                        </div>
+                                                        
+                                                        <div class="container">
+                                                            <img src="imagens/cupcake.png" alt="Imagem" class="imagem">
+                                                            <div class="text">
+                                                                <p class="titlefoodsesquerda">Ingredientes</p> 
+                                                                    <ul>
+                                                                        <li>3 gemas</li>
+                                                                        <li>1 colher de sopa de essência de baunilha</li>
+                                                                        <li>1 xícara de óleo</li>
+                                                                        <li>3 e 1/2 xícaras de farinha de trigo</li>
+                                                                        <li>2 xícaras de açúcar</li>
+                                                                        <li>250 ml de leite</li>
+                                                                        <li>3 claras em neve</li>
+                                                                        <li>1 colher (sopa) de fermento</li>
+                                                                        <li>Recheio e cobertura a gosto, aqui usamos doce de leite</li>
+                                                                    </ul>
+                                                                </div>
+                                                        </div>
+                                                        <br>
+                                                        <p class="titlefoodsesquerda">Modo de preparo:</p>
+                                                            <ul>
+                                                                <li>Bata a gema, o açúcar e a baunilha na batedeira.</li>
+                                                                <li>Em seguida, acrescente o leite e o óleo e bata mais um pouco.</li>
+                                                                <li>Adicione as claras em neve, a farinha de trigo e o fermento e bata mais com o auxílio de um fouet (não bata na batedeira para que o fermento possa atuar).</li>
+                                                                <li>Disponha a massa em forminhas próprias para cupcakes (sem encher muito) e leve ao forno até dourar.</li>
+                                                                <li>Após assado e frios, faça um buraco no centro de cada cupcake com uma faca.</li>
+                                                                <li>Reserve a tampinha.</li>
+                                                                <li>Coloque o recheio escolhido em um saco de confeitar e junte-o no furo, no centro do cupcake.</li>
+                                                                <li>Coloque a tampinha e cubra o cupcake com o a cobertura desejada, aqui usamos doce de leite para rechear e para cobrir.</li>
+                                                                <li>Coloque confeitos de sua preferência.</li>
+                                                            </ul>
+<br>
+                                                        
+<input type="checkbox" id="toggle-content">
+    <label for="toggle-content" class="arrow-container">
+    <div class="arrow"></div>
+    <span style="margin-left: 10px;">Ver dicas</span>
+</label>
+
+<!-- Conteúdo adicional -->
+<div class="more-content" id="more-content">
+<section id="dicas"></section>
+<p class="titlefoods">Dicas</p>
+<ul>
+    <li>Em receitas doces sempre adicione uma pitada de sal para realçar o sabor</li>
+    <li>Deixe o forno preaquecido</li>
+    <li>Peneire os insgredientes secos antes de misturar na massa </li>
+    <li>Unte a forma</li>
+    <li>Os ingredientes devem estar em temperatura ambiente</li>
+    <li>Para amenizar o doce da cobertura e do recheio, misture chantilly</li>
+    <li>Para caldas, o leite condensado é um bom ingrediente a ser usado. Dá sabor ao mesmo tempo que não agride o seu produto</li>
+    <li>Faça recheios de acordo com o tamanho. Quanto mais alto, mais recheios</li>
+    <li>Para obter melhor sabor,use sempre produtos com boa qualidade como: leite condensado e creme de leite ao invés de mistura láctea</li>
+</ul>
+
+
+
+
+</div>
+<br>
+<section id="sobre"></section>
+    <footer>
+    <div class="flex-container">
+        <img src="imagens/c7d2b3ad2c2442b3be6db106039bcf74-free.png" alt="Imagem 1" class="image">
+        <p class="text">© 2024 <a href="receita&sabor">Receitas&Sabor</a>. Todos os direitos reservados.</p>
+        <img src="imagens/logoifc.png" alt="Imagem 2" class="image">
+    </div>
+    <h5>Desenvolvido por: Bianca Gabriela Golfe</h5>
+    </footer>
+</body>
+</html>
